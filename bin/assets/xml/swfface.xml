@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<face>
+	<item id="00001" code="[/吃惊]" source="assets/Face/01.swf" des="吃惊" group="01"/>
+	<item id="00002" code="[/哭泣]" source="assets/Face/02.swf" des="哭泣" group="01"/>
+	<item id="00003" code="[/晕]" source="assets/Face/03.swf" des="晕" group="01"/>
+	<item id="00004" code="[/受不了]" source="assets/Face/04.swf" des="受不了" group="01"/>
+	<item id="00005" code="[/汗]" source="assets/Face/05.swf" des="汗" group="01"/>
+	<item id="00006" code="[/无耐]" source="assets/Face/06.swf" des="无耐" group="01"/>
+	<item id="00007" code="[/发怒]" source="assets/Face/07.swf" des="发怒" group="01"/>
+	<item id="00008" code="[/高興]" source="assets/Face/08.swf" des="高興" group="01"/>
+	<item id="00009" code="[/愤怒]" source="assets/Face/09.swf" des="愤怒" group="01"/>
+	<item id="00010" code="[/流口水]" source="assets/Face/10.swf" des="流口水" group="01"/>
+	<item id="00011" code="[/迷恋]" source="assets/Face/11.swf" des="迷恋" group="01"/>
+	<item id="00012" code="[/呆了]" source="assets/Face/12.swf" des="呆了" group="01"/>
+	<item id="00013" code="[/吐舌]" source="assets/Face/13.swf" des="吐舌" group="01"/>
+	<item id="00014" code="[/心情好]" source="assets/Face/14.swf" des="心情好" group="01"/>
+	<item id="00015" code="[/酷毙了]" source="assets/Face/15.swf" des="酷毙了" group="01"/>
+	<item id="00016" code="[/扮可爱]" source="assets/Face/16.swf" des="扮可爱" group="01"/>
+	<item id="00017" code="[/微笑]" source="assets/Face/17.swf" des="微笑" group="01"/>
+	<item id="00018" code="[/抛媚眼]" source="assets/Face/18.swf" des="抛媚眼" group="01"/>
+	<item id="00019" code="[/藐视]" source="assets/Face/19.swf" des="藐视" group="01"/>
+	<item id="00020" code="[/无语]" source="assets/Face/20.swf" des="无语" group="01"/>
+	<item id="00021" code="[/不明白]" source="assets/Face/21.swf" des="不明白" group="01"/>
+	<item id="00022" code="[/要砍人啦]" source="assets/Face/22.swf" des="要砍人啦" group="01"/>
+	<item id="00023" code="[/傻笑]" source="assets/Face/23.swf" des="傻笑" group="01"/>
+	<item id="00024" code="[/心花怒放]" source="assets/Face/24.swf" des="心花怒放" group="01"/>
+	<item id="00025" code="[/受伤了]" source="assets/Face/25.swf" des="受伤了或病了" group="01"/>
+	<item id="00026" code="[/走神]" source="assets/Face/26.swf" des="走神" group="01"/>
+</face>
