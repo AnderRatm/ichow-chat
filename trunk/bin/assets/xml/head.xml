@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<head>
+  <item id="001" code="Benino" source="assets/head/Benino.png" />
+  <item id="002" code="Cucaracha" source="assets/head/Cucaracha.png" />
+  <item id="003" code="Katrina" source="assets/head/Katrina.png" />
+  <item id="004" code="Lou" source="assets/head/Lou.png" />
+  <item id="005" code="Morito" source="assets/head/Morito.png" />
+  <item id="006" code="Nano" source="assets/head/Nano.png" />
+  <item id="007" code="Paulo" source="assets/head/Paulo.png" />
+  <item id="008" code="Pedro" source="assets/head/Pedro.png" />
+  <item id="009" code="Polenta" source="assets/head/Polenta.png" />
+  <item id="010" code="def" source="assets/head/dummyContact.png" />
+</head>

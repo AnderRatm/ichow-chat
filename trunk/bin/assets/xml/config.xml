@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+	eelive 2.012.1
+	皮肤&布局设置
+	2011/05/19
+-->
+<config>
+	<settings>
+	</settings>
+	<!-- 布局 -->
+	<composition name="composition">
+		<!-- 
+			记载界面
+			加载条，百分比
+		<loader> 
+			<VBox alignment="center">
+				<ProgressBar value="0.5"></ProgressBar>
+				<Label text="50%"></Label>
+			</VBox>
+		</loader>-->
+		<!-- 
+			登陆界面
+			登陆窗口，用户名，密码，服务器，登陆按钮，|注册按钮
+		-->
+		<Login>
+			<!-- login form -->
+			<Panel width="198" height="600" shadow="false">
+				<!-- login window -->
+				<Window width="190" height="140" x="4" y="250" draggable="false" title="登  錄">
+					<VBox x="15" y="10" spacing="10" alignment="center">
+						<HBox spacing="55">
+							<VBox>
+								<!-- info label -->
+								<Label text="用戶名:"/>
+								<Label text="密  碼:"/>
+								<!-- <Label text="Server IP:"/> -->
+							</VBox>
+							<VBox spacing="8">
+								<!-- info input -->
+								<InputText id="usernameIT" text="username"></InputText>
+								<InputText id="passwordIT" text="password"></InputText>
+								<!-- <InputText></InputText> -->
+							</VBox>
+						</HBox>
+						<Label id="loginInfo" text="welcome!"/>
+						<!-- send button -->
+						<PushButton id="loginButton" label="登  錄"width="100" height="22"></PushButton>
+					</VBox>
+				</Window>
+			</Panel>
+		</Login>
+		<!-- 
+			主界面
+			背景框，显示框，功能列表
+		-->
+		<Main>
+			<!-- main form -->
+			<HBox spacing="0">
+				<!-- chatBG Border -->
+				<Panel id="chatBG" width="1" height="600" shadow="false">
+					
+				</Panel>
+				<!-- mainBG Border -->
+				<Panel id="mainBG" width="198" height="600" alpha="1" shadow="false">
+					<!--  spacing: [def:5] alignment: [center,left,right,none] -->
+					<VBox  spacing="0" alignment="center">
+						<!-- title bar -->
+						<Panel id="TitleBar" wpercent="mainBG:100%" hpercent="mainBG:5%" shadow="false">
+							<!-- chat name -->
+							<Label id="TitleLabel" text="在线交流 eeLive v2" x="5" y="8"></Label>
+							<!-- exit & help button -->
+							<HBox id="HTitleBar" x="158" y="8">
+								<PushButton id="HelpButton" width="15" height="15" label="?" enabled="false" />
+								<PushButton id="ExitButton" width="15" height="15" label="X" />
+							</HBox>
+						</Panel>
+						<!-- title icon -->
+						<Panel id="HeadIcon" color="0xFFFFFF" wpercent="mainBG:95%" hpercent="mainBG:10%" shadow="false">
+							
+						</Panel>
+						<!-- forms list -->
+						<Panel id="FormsList" shadow="false" wpercent="mainBG:95%" hpercent="mainBG:5%">
+							<HBox id="HFormsList" spacing="0" >
+								<PushButton id="GroupsButton" wpercent="FormsList:50%" hpercent="FormsList:100%" label="好  友"/>
+								<PushButton id="RoomsButton" wpercent="FormsList:50%" hpercent="FormsList:100%" label="房  間"/>
+							</HBox>
+						</Panel>
+						<!-- forms show -->
+						<ScrollPane id="FormsShow" shadow="false" hpercent="mainBG:75%" wpercent="mainBG:95%" autoHideScrollBar="true" color="0xFFFFFF" dragContent="false">
+							
+						</ScrollPane>
+						<!--  Tools list -->
+						<Panel id="ToolsList" wpercent="mainBG:100%" hpercent="mainBG:5%" shadow="false">
+							<!-- room & group button -->
+							<HBox id="HToolsList" x="4" y="4">
+								<PushButton id="DrawButton" width="42" height="22" label="白板" enabled="false" />
+								<PushButton id="GameButton" width="42" height="22" label="遊戲" enabled="false" />
+							</HBox>
+						</Panel>
+					</VBox>
+				</Panel>
+			</HBox>
+		</Main>
+		<!-- 
+			聊天框
+			框列表，显示信息框，样式工具条，输入信息框，发送按钮，关闭按钮
+		-->
+		<Chat>
+			<!-- chat background -->
+			<Panel id="chatBG" width="300" height="600" shadow="false" ></Panel>
+			<VBox spacing="2" alignment="right">
+				<Panel id="HeadIcon" wpercent="chatBG:100%" hpercent="chatBG:5%" shadow="false">
+				</Panel>
+				<!-- message show flow text -->
+				<Panel id="MessageShow" shadow="false" color="0xFFFFFF" wpercent="chatBG:100%" hpercent="chatBG:60%" />
+				<!-- style bar -->
+				<Panel id="StyleBar" hpercent="chatBG:5%" wpercent="chatBG:100%" shadow="false">
+					<HBox x="4" y="4">
+						<PushButton id="SendFacesButton" width="50" height="22" label="表情" />
+						<PushButton id="FontStyleButton" width="50" height="22" label="字體" />
+						<PushButton id="SendImageButton" width="50" height="22" label="圖片" />
+						<PushButton id="DrawButton" width="50" height="22" label="画图" />
+					</HBox>
+				</Panel>
+				<!-- message input flow text -->
+				<Panel id="MessageInput" shadow="false" color="0xFFFFFF" wpercent="chatBG:100%" hpercent="chatBG:23%" />
+				<!-- send & close button -->
+				<HBox>
+					<PushButton id="HistoryButton" label="聊天記錄" width="70" enabled="false" />
+					<PushButton id="CloseButton" label="關  閉" width="70" />
+					<PushButton id="SendMessageButton" label="發  送" width="70" />
+				</HBox>
+			</VBox>
+		</Chat>
+		<!-- 
+		
+		-->
+		<ChatList>
+			<PushButton />
+		</ChatList>
+		<!-- 
+		
+		-->
+		<TextFormatBar>
+			<Panel id="TextFormatBar" shadow="false" width="300" height="30" >
+				<HBox x="4" y="4">
+					<ComboBox id="FontNameComboBox" width="80" height="22" defaultLabel="宋体" />
+					<ComboBox id="FontSizeComboBox" width="50" height="22" defaultLabel="12" />
+					<PushButton id="BoldPushButton" width="22" height="22" toggle="true" label="B" />
+					<PushButton id="UnLinePushButton" width="22" height="22" toggle="true" label="_" />
+					<PushButton id="ItalicPushButton" width="22" height="22" toggle="true" label="I" />
+				</HBox>
+			</Panel>
+		</TextFormatBar>
+	</composition>
+	<!-- assets loader -->
+	<LoaderMax name="dynamicLoaderMax" load="true" prependURLs="">
+		<XMLLoader name="faces" url="assets/xml/face.xml" />
+		<XMLLoader name="head" url="assets/xml/head.xml"/>
+		<SWFLoader name="skinSWF" url="assets/swf/skin.swf" estimatedBytes="15000" />
+		<CSSLoader name="skinCSS" url="assets/css/skin.css" />
+	</LoaderMax>
+</config>

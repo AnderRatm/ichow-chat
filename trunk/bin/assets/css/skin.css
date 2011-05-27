@@ -1,0 +1,375 @@
+﻿/*
+///////////////////////////////////////////////////////////////////////////////
+//
+//  wskeee
+//  version v1.0
+//
+//  
+//
+///////////////////////////////////////////////////////////////////////////////
+*/
+
+/*
+//------------------------------
+//  Component
+//------------------------------
+*/
+
+Component
+{
+	backgroundAlpha: 1.0; /* this runs the opacity of nearly every square piece of the components */
+	backgroundSize: "auto";
+
+	borderColor: #92A0AD;	
+	
+	fillAlphas: 0.3, 0.3, 0.85, 0.75; /* last pair are for OVER state */
+	fillColors: #6C8AA4, #BFD5E8, #5AA0C3, #A8D0E2;
+	
+	highlightAlphas: 0.08, 0.14; /* use this to control the 'light' cast on the components */
+
+	/* themeColor	*/
+	themeColor: #7AA4B9;	
+	rollOverColor: #AADEFF;
+	selectionColor: #7FCDFE;
+	
+	fontSize: 12;
+}
+
+/*
+//-----------------------------------------------
+//  Label
+//
+//	fontWeight			: normal; bold; normal;
+//	fontStyle			: normal; italic;
+//  textDecoration		: underline; none;
+//	textAlign			: center ; right; left;
+//-----------------------------------------------
+*/
+
+Label
+{
+	color: 0x000000;
+	fontSize: 12;
+	fontName: 宋体;
+	fontWeight:normal;
+	fontStyle:normal;
+	textDecoration:none;
+	textAlign:left;
+}
+
+/*
+//-----------------------------------------------
+//  Text
+//
+//	fontWeight			: normal; bold; normal;
+//	fontStyle			: normal; italic;
+//  textDecoration		: underline; none;
+//	textAlign			: center ; right; left;
+//-----------------------------------------------
+*/
+
+Text
+{
+	color: 0x000000;
+	fontSize: 12;
+	fontName: 宋体;
+	fontWeight:normal;
+	fontStyle:normal;
+	textDecoration:none;
+	textAlign:left;
+	
+	backgroundColor:0xffffff;
+	backgroundAlpha:1;
+}
+
+
+/*
+//------------------------------
+//  PushButton
+//
+//	fontWeight			: normal; bold; normal;
+//	fontStyle			: normal; italic;
+//  textDecoration		: underline; none;
+//	textAlign			: center ; right; left;
+//------------------------------
+*/
+
+PushButton
+{
+	disabledSkin: Button_disabledSkin;
+	downSkin: Button_downSkin;
+	overSkin: Button_overSkin;
+	upSkin: Button_upSkin;
+	
+	selectedDisabledSkin: Button_selectedDisabledSkin;
+	selectedDownSkin: Button_selectedDownSkin;
+	selectedOverSkin: Button_selectedOverSkin;
+	selectedUpSkin: Button_selectedUpSkin;
+	
+	color: 0x000000;	
+	fontSize: 12;
+	fontName: 宋体;
+	fontWeight:normal;
+	fontStyle:normal;
+	textDecoration:none;
+	textAlign:center;
+	
+	height: 22;
+}
+
+/*
+//------------------------------
+//  InputText
+//
+//	backgroundAlpha	: 0~1;
+//	borderThickness	: 小于1不显示边框，默认为0;
+//	fontWeight			: normal; bold; normal;
+//	fontStyle			: normal; italic;
+//  textDecoration		: underline; none;
+//	textAlign			: center ; right; left;
+//------------------------------
+*/
+
+InputText
+{
+	backgroundColor: 0xffffff;
+	backgroundAlpha: 1;
+	borderColor: 0x000000;
+	borderThickness: 0;
+	
+	color: 0x000000;	
+	fontSize: 12;
+	fontName: 宋体;
+	fontWeight:normal;
+	fontStyle:normal;
+	textDecoration:none;
+	textAlign:left;
+}
+
+/*
+//------------------------------
+//  Slider
+//------------------------------
+*/
+
+Slider
+{
+	thumbUpSkin: ScrollThumb_upSkin;
+	thumbOverSkin: ScrollThumb_overSkin;
+	thumbDownSkin: ScrollThumb_downSkin;
+	thumbIcon: ScrollBar_thumbIcon;
+	trackSkin: ScrollTrack_skin;
+}
+
+/*
+//------------------------------
+//  ScrollBar
+//------------------------------
+*/
+
+ScrollBar
+{
+	upArrowUpSkin: ScrollArrowUp_upSkin;
+	upArrowOverSkin: ScrollArrowUp_overSkin;
+	upArrowDownSkin: ScrollArrowUp_downSkin;
+	
+	thumbUpSkin: ScrollThumb_upSkin;
+	thumbOverSkin: ScrollThumb_overSkin;
+	thumbDownSkin: ScrollThumb_downSkin;
+	thumbIcon: ScrollBar_thumbIcon;
+	trackSkin: ScrollTrack_skin;
+	
+	downArrowUpSkin: ScrollArrowDown_upSkin;
+	downArrowOverSkin: ScrollArrowDown_overSkin;
+	downArrowDownSkin: ScrollArrowDown_downSkin;
+}
+
+/*
+//------------------------------
+//  List
+//	alternateColor 相隔颜色
+//------------------------------
+*/
+
+List
+{
+	defaultColor: 0xffffff;
+	selectedColor: 0x7fcdfe;
+	rolloverColor: 0xaadeff;
+	alternateColor:0x999999;
+	
+	listItemHeight:20;
+
+	verticalScrollBarStyleName:ScrollBar;
+}
+
+/*
+//------------------------------
+//  Panel
+//------------------------------
+*/
+
+Panel
+{
+	color:0xffffff;
+	backgroundAlpha:1;
+	
+}
+
+/*
+//------------------------------
+//  Panel
+//
+//	horizontalScrollPolicy: auto;auto;on;off
+//	verticalScrollPolicy: auto;auto;on;off
+//------------------------------
+*/
+
+ScrollPanel
+{
+	verticalScrollBarStyleName:ScrollBar;
+	horizontalScrollBarStyleName:ScrollBar;
+	
+}
+
+/*
+//------------------------------
+//  Window
+//------------------------------
+*/
+
+Window
+{
+	headColor:0xffffff;
+	headerHeight:20;
+	backgroundColor:0xffffff;
+	
+	fontColor:0x000000;
+	fontSize:12;
+	fontFamily:宋体;
+	
+	minimizeIcon:Window_MinimizeIcon;
+	closeButtonStyleName:windowCloseButton;
+}
+
+windowCloseButton
+{
+	upSkin:Window_CloseButton_UpSkin;
+	overSkin:Window_CloseButton_OverSkin;
+	downSkin:Window_CloseButton_DownSkin;
+}
+
+/*
+//------------------------------
+//  ComboBox
+//------------------------------
+*/
+
+ComboBox
+{
+	labelButtonStyleName:comboBoxLabelButtonStyle;
+	dropListStyleName:List;
+}
+
+comboBoxLabelButtonStyle
+{
+	disabledSkin: ComboBox_disabledSkin;
+	downSkin: ComboBox_downSkin;
+	overSkin: ComboBox_overSkin;
+	upSkin: ComboBox_upSkin;
+	
+	color: 0x000000;	
+	fontSize: 12;
+	fontName: 宋体;
+	fontWeight:normal;
+	fontStyle:normal;
+	textDecoration:none;
+	textAlign:left;
+}
+
+/*
+//------------------------------
+//  CheckBox
+//------------------------------
+*/
+
+CheckBox
+{
+	iconButtonStyleName:checkBoxIconButtonStyleName;
+	labelStyleName:checkBoxLabelStyleName;
+}
+
+checkBoxIconButtonStyleName
+{
+	disabledSkin: CheckBox_disabledSkin;
+	downSkin: CheckBox_downIcon;
+	overSkin: CheckBox_overIcon;
+	upSkin: CheckBox_upIcon;
+	
+	selectedDisabledSkin: CheckBox_selectedDisabledIcon;
+	selectedDownSkin: CheckBox_selectedDownIcon;
+	selectedOverSkin: CheckBox_selectedOverIcon;
+	selectedUpSkin: CheckBox_selectedUpIcon;
+}
+
+checkBoxLabelStyleName
+{
+	color: 0x000000;
+	fontSize: 12;
+	fontName: 宋体;
+	fontWeight:normal;
+	fontStyle:normal;
+	textDecoration:none;
+	textAlign:center;
+}
+
+
+/*
+//------------------------------
+//  CheckBox
+//------------------------------
+*/
+
+RadioButton
+{
+	iconButtonStyleName:radioButtonIconButtonStyleName;
+	labelStyleName:radioButtonLabelStyleName;
+}
+
+
+radioButtonIconButtonStyleName
+{
+	disabledSkin: RadioButton_disabledSkin;
+	downSkin: RadioButton_downIcon;
+	overSkin: RadioButton_overIcon;
+	upSkin: RadioButton_upIcon;
+	
+	selectedDisabledSkin: RadioButton_selectedDisabledIcon;
+	selectedDownSkin: RadioButton_selectedDownIcon;
+	selectedOverSkin: RadioButton_selectedOverIcon;
+	selectedUpSkin: RadioButton_selectedUpIcon;
+}
+
+radioButtonLabelStyleName
+{
+	color: 0x000000;
+	fontSize: 12;
+	fontName: 宋体;
+	fontWeight:normal;
+	fontStyle:normal;
+	textDecoration:none;
+	textAlign:center;
+}
+/*
+//------------------------------
+//  customScrollBar
+//------------------------------
+*/
+customScrollBar
+{
+	thumbUpSkin: ScrollThumb_upSkin;
+	thumbOverSkin: ScrollThumb_overSkin;
+	thumbDownSkin: ScrollThumb_downSkin;
+	thumbIcon: ScrollBar_thumbIcon;
+	trackSkin: ScrollTrack_skin2;
+}
