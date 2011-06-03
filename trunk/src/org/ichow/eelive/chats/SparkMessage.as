@@ -31,9 +31,11 @@ package org.ichow.eelive.chats
 		public var local:Boolean;
 		public var consecutive:Boolean;
 		private var _chat:SparkChat;
+		private var _id:String;
 		 
-		public function SparkMessage(from:UnescapedJID, body:String, nick:String = null, color:String = null, time:Date = null, chat:SparkChat=null)
+		public function SparkMessage(from:UnescapedJID, body:String, nick:String = null, color:String = null, time:Date = null, chat:SparkChat=null, id:String = null)
 		{
+			_id = id;
 			_from = from;
 			_nick = nick;
 			_color = color;
@@ -59,6 +61,10 @@ package org.ichow.eelive.chats
 		
 		public function set nick(nick:String):void {
 			_nick = nick;
+		}
+		
+		public function get id():String {
+			return _id;
 		}
 		
 		public function get nick():String 

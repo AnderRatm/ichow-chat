@@ -17,6 +17,7 @@ package org.ichow.eelive.components {
 	import flashx.textLayout.elements.TextFlow;
 	import flashx.textLayout.events.CompositionCompleteEvent;
 	import flashx.textLayout.events.StatusChangeEvent;
+	import org.ichow.eelive.utils.ChatUtil;
 
 	/**
 	 * ...
@@ -287,6 +288,21 @@ package org.ichow.eelive.components {
 
 		public function get textDecoration():* {
 			return _flow.textDecoration;
+		}
+		/**
+		 * 替换
+		 * @param	id
+		 * @param	msg
+		 */
+		public function replace(id:String,msg:Object):void {
+			var div:DivElement = _flow.getElementByID(id) as DivElement;
+			if (!div) return;
+			var newDiv:DivElement = getElement(ChatUtil.unescapeImg('<p>' + msg.label + '</p>' + msg.content));
+			var index:int = _flow.getChildIndex(div);
+			_flow.replaceChildren(index, index + 1, newDiv);
+			newDiv.id = id;
+			updateFlow();
+			updateScroll();
 		}
 
 	}
