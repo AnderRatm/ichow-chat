@@ -9,8 +9,7 @@ package org.ichow.eelive.components {
 	import flash.text.TextFormat;
 	import flash.utils.Timer;
 	import org.ichow.eelive.managers.ChatManager;
-	import org.ichow.eelive.managers.ToolsManager;
-	import org.ichow.eelive.managers.VCardManager;
+	import org.ichow.eelive.managers.tools.ToolsManager;
 	import org.igniterealtime.xiff.core.UnescapedJID;
 
 	/**

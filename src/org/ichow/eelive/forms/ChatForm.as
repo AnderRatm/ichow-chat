@@ -15,7 +15,7 @@ package org.ichow.eelive.forms
 	import org.ichow.eelive.components.TextFlowPanel;
 	import org.ichow.eelive.managers.ChatManager;
 	import org.ichow.eelive.managers.SparkManager;
-	import org.ichow.eelive.managers.ToolsManager;
+	import org.ichow.eelive.managers.tools.ToolsManager;
 	import org.ichow.eelive.utils.ChatStyle;
 	import org.ichow.eelive.utils.ChatUtil;
 	import org.ichow.eelive.utils.DateUtil;
@@ -239,7 +239,10 @@ package org.ichow.eelive.forms
 		 */
 		public function addMessage(message:SparkMessage):void 
 		{
-			_flowShow.addMessage(ChatStyle.instance.addRecord("chat", { self:message.nick, content:ChatUtil.unescapeImg(Base64.decode(message.body)), time:DateUtil.getDate() } ));
+			var nick:String = message.nick;
+			var content:String = ChatUtil.unescapeImg(Base64.decode(message.body));
+			_flowShow.addMessage(ChatStyle.instance.addRecord("chat", { self:nick, content:content, time:DateUtil.getDate() } ));
+			//ToolsManager.historyManager.save(message.from, { label:nick, content:content, id:message.id, jid:message.from.bareJID } );
 		}
 		/**
 		 * 通知
@@ -258,6 +261,22 @@ package org.ichow.eelive.forms
 		public function addSystemMessage(body:String, time:Date = null):void 
 		{
 			_flowShow.addMessage(ChatStyle.instance.addRecord("system", { content:body } ));
+		}
+		/**
+		 * 恢复
+		 * @param	msgID
+		 * @param	obj
+		 */
+		public function resume(msgID:String, obj:Object):void {
+			_flowShow.replace(msgID, obj);
+		}
+		/**
+		 * 屏蔽
+		 * @param	msgID
+		 * @param	obj
+		 */
+		public function screen(msgID:String, obj:Object):void {
+			_flowShow.replace(msgID, obj);
 		}
 		
 	}

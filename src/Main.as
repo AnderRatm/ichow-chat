@@ -10,12 +10,14 @@ package {
 	import flash.events.Event;
 	import flash.system.Security;
 	import flash.text.StyleSheet;
+	import flash.ui.ContextMenu;
+	import flash.ui.ContextMenuItem;
 	import flash.utils.setTimeout;
 	import org.ichow.eelive.managers.FormManager;
 	import org.ichow.eelive.managers.SparkManager;
-	import org.ichow.eelive.managers.ToolsManager;
-	import org.ichow.eelive.managers.VCardManager;
+	import org.ichow.eelive.managers.tools.ToolsManager
 	import org.ichow.eelive.utils.ChatStyle;
+	import version.Version;
 
 	/**
 	 * ...
@@ -24,7 +26,6 @@ package {
 	[Frame(factoryClass="Preloader")]
 	[SWF(width="500",height="600")]
 	public class Main extends Sprite {
-		public static const VERSION:String = "2.012.2";
 		//默认配置
 		private static var def_config:Object = {
 				  autologin	: "false", 
@@ -72,11 +73,26 @@ package {
 			canvas = new Sprite();
 			addChild(canvas);
 			var url:String = "assets/xml/config.xml";
-			var l:XMLLoader = new XMLLoader(url, {name: "config", onComplete: onConfigComplete, onProgress: onConfigProgress});
+			var l:XMLLoader = new XMLLoader(url, {name: "config", onComplete: onConfigComplete});
 			l.load(true);
 
 			stage.addEventListener(Event.RESIZE, onResize);
 			onResize();
+			
+			//menu
+			addVersionMenu();
+		}
+		/**
+		 * 版本
+		 */
+		private function addVersionMenu():void 
+		{
+			var _menu:ContextMenu = new ContextMenu();
+			var _version:String =  Version.Major + "." + Version.Minor + "." + Version.Build + "." +Version.Revision + "  " + Version.Timestamp + " by " +Version.Author;
+			var _item:ContextMenuItem = new ContextMenuItem(_version, false, false);
+			_menu.hideBuiltInItems();
+			_menu.customItems.push(_item);
+			this.contextMenu = _menu;
 		}
 
 		/**
@@ -90,17 +106,6 @@ package {
 			canvas.graphics.beginFill(0xFFFFFF, .2);
 			canvas.graphics.drawRect(w / -2, h / -2, w, h);
 			canvas.graphics.endFill();
-		}
-
-		/**
-		 * 加载条
-		 * @param	e
-		 */
-		private function onConfigProgress(e:LoaderEvent):void {
-			//var l:DataLoader = e.target as DataLoader;
-			//_progress.value = l.progress;
-			//var s:String = l.progress * 100 + "";
-			//_percent.text = s.substr(0, 2) + "%";
 		}
 
 		/**
@@ -128,7 +133,7 @@ package {
 			ToolsManager.facesManager.loadItems(_facesXML);
 			//样式
 			ChatStyle.instance.setFormat("system", {text: "$content", head: "【系统】"});
-			ChatStyle.instance.setFormat("chat", {text: "$self  $time $content", head: ""});
+			ChatStyle.instance.setFormat("chat", {text: "$self  $time $content", head: "【聊天】"});
 			//设置素材
 			Style.cssStyle = _css;
 			Style.skinSwf = _skin;

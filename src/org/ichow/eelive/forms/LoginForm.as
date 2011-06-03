@@ -43,7 +43,6 @@ package org.ichow.eelive.forms {
 		protected override function addChildren():void {
 			super.addChildren();
 			composition.parseXML(_xml);
-
 			usernameIT = composition.getCompById("usernameIT") as InputText;
 			passwordIT = composition.getCompById("passwordIT") as InputText;
 			passwordIT.password = true;

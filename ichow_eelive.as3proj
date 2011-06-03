@@ -14,7 +14,9 @@
   <!-- Other classes to be compiled into your SWF -->
   <classpaths>
     <class path="src" />
-    <class path="..\..\flex\minimalcomps\src" />
+    <class path="..\..\..\ichow\APIs\minimalcomps\src" />
+    <class path="..\..\..\ichow\APIs\as3crypto\as3crypto\src" />
+    <class path="..\..\..\ichow\APIs\xiff\src" />
   </classpaths>
   <!-- Build options -->
   <build>
@@ -69,7 +71,7 @@
   </library>
   <!-- Class files to compile (other referenced classes will automatically be included) -->
   <compileTargets>
-    <compile path="src\Main.as" />
+    <compile path="src\Test.as" />
   </compileTargets>
   <!-- Paths to exclude from the Project Explorer tree -->
   <hiddenPaths>
