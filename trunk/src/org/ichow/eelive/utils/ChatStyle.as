@@ -40,6 +40,7 @@ package org.ichow.eelive.utils
                 throw new Error("找不到 " + _format + " 格式！");
             }
 			return "";
+			
         }
 		
 		//添加格式，Object格式：{text:"$self对$you说：$content",head:"【说话】"}
