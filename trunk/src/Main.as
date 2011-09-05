@@ -125,8 +125,11 @@ package
 			ChatStyle.instance.setFormat( "system" , { text: "$content" , head: "【系统】" } );
 			ChatStyle.instance.setFormat( "chat" , { text: "$self  $time $content" , head: "【聊天】" } );
 			//设置素材
-			Style.cssStyle = _css;
-			Style.skinSwf = _skin;
+			//Style.cssStyle = _css;
+			//Style.skinSwf = _skin;
+			Style.embedFonts = false;
+			Style.fontName = "微软雅黑";
+			Style.fontSize = 12;
 			//初始框架
 			initForms();
 		}

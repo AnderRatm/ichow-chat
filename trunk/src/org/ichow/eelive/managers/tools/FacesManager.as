@@ -58,7 +58,7 @@ package org.ichow.eelive.managers.tools {
 			_faces = new Vector.<Sprite>();
 			//
 			_scrollPane = new ScrollPane();
-			_scrollPane.horizontalScrollPolicy = "off";
+			//_scrollPane.horizontalScrollPolicy = "off";
 			_scrollPane.dragContent = false;
 			_scrollPane.setSize(_horizontalNum * _side + 20, _verticalNum * _side + 4);
 			_scrollPane.update();

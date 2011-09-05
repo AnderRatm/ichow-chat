@@ -78,8 +78,8 @@ package org.ichow.eelive.components {
 				w.draggable = false;
 				w.hasMinimizeButton = true;
 				w.shadow = false;
-				w.backgroundAlpha = 0;
-				w.titleBar.backgroundAlpha = 0;
+				//w.backgroundAlpha = 0;
+				//w.titleBar.backgroundAlpha = 0;
 				w.titleBar.shadow = false;
 				w.color = 0xFFFFFF;
 				if (i.label)

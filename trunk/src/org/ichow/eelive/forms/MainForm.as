@@ -53,7 +53,7 @@ package org.ichow.eelive.forms {
 			mainBG = composition.getCompById("mainBG") as Panel;
 			exitButton = composition.getCompById("ExitButton") as PushButton;
 
-			formsShow.horizontalScrollPolicy = "off";
+			//formsShow.horizontalScrollPolicy = "off";
 			FormsWidth = formsShow.width;
 			FormsHeight = formsShow.height;
 
