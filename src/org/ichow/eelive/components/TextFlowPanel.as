@@ -95,13 +95,13 @@ package org.ichow.eelive.components
 			_canvas.x = _canvas.y = __padding;
 			
 			_scroll = new ScrollPane( this , 0 , 0 );
-			_scroll.verticalScrollPolicy = "auto";
-			_scroll.horizontalScrollPolicy = "off";
+			//_scroll.verticalScrollPolicy = "auto";
+			//_scroll.horizontalScrollPolicy = "off";
 			_scroll.autoHideScrollBar = true;
 			_scroll.addChild( _canvas );
 			_scroll.setSize( _width , _height );
 			_scroll.dragContent = false;
-			_scroll.autoVScroll = true;
+			//_scroll.autoVScroll = true;
 			_scroll.update();
 			
 			addEventListeners();

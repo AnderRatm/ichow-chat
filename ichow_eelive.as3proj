@@ -9,9 +9,10 @@
     <movie width="800" />
     <movie height="600" />
     <movie version="10" />
-    <movie minorVersion="0" />
+    <movie minorVersion="3" />
     <movie platform="Flash Player" />
     <movie background="#FFFFFF" />
+    <movie preferredSDK="Flex 4.5, AIR 3.0;4.5.0, 3.0;" />
   </output>
   <!-- Other classes to be compiled into your SWF -->
   <classpaths>
@@ -19,8 +20,7 @@
     <class path="..\..\..\..\ichow\APIs\as3crypto\as3crypto\src" />
     <class path="..\..\..\..\ichow\APIs\xiff\src" />
     <class path="..\..\..\..\ichow\APIs\greensock" />
-    <class path="..\..\..\flex\minimalcomps\src" />
-    <class path="C:\Users\Administrator\Desktop\src" />
+    <class path="..\..\..\..\ichow\APIs\minimalcomps\src" />
   </classpaths>
   <!-- Build options -->
   <build>
