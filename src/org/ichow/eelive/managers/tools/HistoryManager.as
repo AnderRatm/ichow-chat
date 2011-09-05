@@ -46,13 +46,13 @@ package org.ichow.eelive.managers.tools {
 		public function save(msg:SparkMessage):void {
 			if (!msg.from || !msg.from.bareJID)
 				return;
-			var _msgs:Array = _msgsObj[jid.bareJID];
+			var _msgs:Array = _msgsObj[msg.from.bareJID];
 			if (!_msgs)
 				_msgs = new Array();
 			_msgs.push(msg);
 			_msgsObj[msg.from.bareJID] = _msgs;
 			//update
-			getHistory(msg.from.bareJID);
+			getHistory(msg.from);
 		}
 
 		/**
