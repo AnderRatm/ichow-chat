@@ -1,0 +1,1 @@
+use as3 develop chat by openfire's api(xiff)
